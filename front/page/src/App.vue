@@ -1,26 +1,19 @@
+<!-- vue路由模板 -->
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app"> 
+    <!-- 根据路由加载视图 -->
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Login from './views/Login.vue'
+import HomePage from './views/HomePage.vue';
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Login,
+    HomePage
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
