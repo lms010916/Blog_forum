@@ -1,5 +1,5 @@
 <template>
-  <div class="common-layout">
+  <div class="login-layout">
     <el-container>
       <el-header>博客登录</el-header>
       <el-main>
@@ -48,7 +48,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .el-header {
   background-color: #ffffff;
   color: #333;
@@ -72,7 +72,7 @@ export default {
   line-height: 160px;
 }
 
-.common-layout {
+.login-layout {
   margin: 150px auto;
   height: 400px;
   width: 400px;

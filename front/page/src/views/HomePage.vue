@@ -1,5 +1,5 @@
 <template>
-  <div class="common-layout">
+  <div class="homepage-layout">
     <el-container>
       <!-- 可以加功能 -->
       <el-header>博客系统</el-header>
@@ -7,7 +7,9 @@
         <el-aside width="200px">
           
         </el-aside>
-        <el-main>Main</el-main>
+        <el-main>
+          <RouterLink to="/login">登录</RouterLink>
+        </el-main>
       </el-container>
       <el-footer>Footer</el-footer>
     </el-container>
@@ -26,8 +28,8 @@ export default {
 }
 </script>
 
-<style>
-.common-layout {
+<style scoped>
+.homepage-layout {
   height: 100%;
   width: 100%;
 }
