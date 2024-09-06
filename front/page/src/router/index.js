@@ -1,4 +1,4 @@
-import { createMemoryHistory, createRouter } from 'vue-router'
+import { createMemoryHistory, createRouter, createWebHistory } from 'vue-router'
 
 // 引入视图
 import HomePage from '../views/HomePage.vue'
@@ -11,7 +11,8 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createMemoryHistory(),
+  // createWebHistory()去除url中的#,可以直接在浏览器地址栏中访问
+  history: createWebHistory(),
   routes,
 })
 

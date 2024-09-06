@@ -14,6 +14,7 @@ myapp/
 │   ├── api/                            # 定义和管理向后端服务器发送请求的模块或服务的目录
 │   ├── assets/                         # 静态资源目录
 │   ├── components/                     # 存放组件目录
+|   |   layout/                         # 存放布局组件目录
 │   ├── router/                         # 路由配置目录
 │   ├── services/                       # 同api/一样功能
 │   ├── store/                          # 全局状态管理目录
