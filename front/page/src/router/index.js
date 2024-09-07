@@ -1,12 +1,36 @@
 import { createMemoryHistory, createRouter, createWebHistory } from 'vue-router'
 
-// 引入视图
-import HomePage from '../views/HomePage.vue'
+// 浏览博客的主页
+import ShowBlog from '../views/ShowBlog.vue'
+// 首页视图
+import BlogCard from '../components/show/BlogCard.vue'
+// 分类视图
+import Category from '../components/show/Category.vue'
+// 精华博客视图
+import GoodBlog from '../components/show/GoodBlog.vue'
 import Login from '../views/Login.vue'
 
+
 const routes = [
-  { path: '/', redirect: '/home' },
-  { path: '/home', component: HomePage },
+  {
+    path: '/',
+    component: ShowBlog,
+    redirect: '/home',
+    children:[
+      {
+        path: 'home',
+        component: BlogCard
+      },
+      {
+        path: 'category',
+        component: Category
+      },
+      {
+        path: 'good',
+        component: GoodBlog
+      }
+    ]
+  },
   { path: '/login', component: Login },
 ]
 

@@ -1,4 +1,3 @@
-<!-- vue路由模板 -->
 <template>
   <div>
     <router-view />
