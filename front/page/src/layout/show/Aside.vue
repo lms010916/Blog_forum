@@ -1,37 +1,37 @@
 <template>
-  <ul>
-    <li>
-      <RouterLink to="/">
-        <el-icon>
-          <School />
-        </el-icon>首页
-      </RouterLink>
-    </li>
-    <li>
-      <RouterLink to="/category">
-        <el-icon>
-          <Operation />
-        </el-icon>博文分类
-      </RouterLink>
-    </li>
-    <li>
-      <RouterLink to="/good">
-        <el-icon>
-          <DataLine />
-        </el-icon>精华博文
-      </RouterLink>
-    </li>
-    <li><a href="#"><el-icon>
-          <Star />
-        </el-icon>我的收藏</a></li>
-    <li><a href="#"><el-icon>
-          <ChatDotSquare />
-        </el-icon>我的评论</a></li>
-    <li><a href="#"><el-icon>
-          <Pointer />
-        </el-icon>我的点赞</a></li>
-  </ul>
-  <p style="position: relative;margin-top: 100px;">By.SML</p>
+  <div class="aside">
+    <ul>
+      <li>
+        <RouterLink to="/">
+          <el-icon>
+            <School />
+          </el-icon>首页
+        </RouterLink>
+      </li>
+      <li>
+        <RouterLink to="/good">
+          <el-icon>
+            <DataLine />
+          </el-icon>精华
+        </RouterLink>
+      </li>
+      <li>
+        <RouterLink to="/newblog">
+          <el-icon>
+            <Document />
+          </el-icon>最新
+        </RouterLink>
+      </li>
+      <li>
+        <RouterLink to="/follow">
+          <el-icon>
+            <User />
+          </el-icon>我的
+        </RouterLink>
+      </li>
+    </ul>
+    <p style="position: relative;margin-top: 100px;">By.SML</p>
+  </div>
 </template>
 
 <script>

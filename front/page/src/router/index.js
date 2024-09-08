@@ -4,10 +4,12 @@ import { createMemoryHistory, createRouter, createWebHistory } from 'vue-router'
 import ShowBlog from '../views/ShowBlog.vue'
 // 首页视图
 import BlogCard from '../components/show/BlogCard.vue'
-// 分类视图
-import Category from '../components/show/Category.vue'
-// 精华博客视图
+// 精华视图
 import GoodBlog from '../components/show/GoodBlog.vue'
+// 最新视图
+import NewBlog from '../components/show/NewBlog.vue'
+// 我的视图
+import Follow from '../components/show/Follow.vue'
 import Login from '../views/Login.vue'
 
 
@@ -22,12 +24,16 @@ const routes = [
         component: BlogCard
       },
       {
-        path: 'category',
-        component: Category
-      },
-      {
         path: 'good',
         component: GoodBlog
+      },
+      {
+        path: 'newblog',
+        component: NewBlog
+      },
+      {
+        path: 'follow',
+        component: Follow
       }
     ]
   },

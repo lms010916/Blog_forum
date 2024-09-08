@@ -2,7 +2,9 @@
   <div class="commont-layout">
     <el-container>
       <!-- 可以加功能 -->
-      <el-header>博客系统</el-header>
+      <el-header>
+        <Header></Header>
+      </el-header>
       <el-container>
         <el-aside>
           <Aside></Aside>
@@ -19,7 +21,9 @@
               <Recommand></Recommand>
             </el-col>
           </el-row>
-          <br v-for="i in 15" />
+          <br/>
+          <el-pagination background layout="prev, pager, next" :total="1000" />
+          <br v-for="i in 10" />
         </el-main>
       </el-container>
     </el-container>
@@ -32,11 +36,14 @@
 import Recommand from '../layout/show/Recommand.vue'
 // 引入aside组件
 import Aside from '../layout/show/Aside.vue'
+// 引入header组件
+import Header from '../layout/show/Header.vue'
 export default {
   name: 'HomePage',
   components: {
     Recommand,
-    Aside
+    Aside,
+    Header
   },
   data() {
     const data = {};
@@ -59,14 +66,6 @@ export default {
   width: 100%;
 }
 
-.el-header {
-  text-align: center;
-  line-height: 60px;
-  height: 60px;
-  background-color: #f9f9f9;
-  box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.1);
-}
-
 .el-aside {
   background-color: #f9f9f9;
   text-align: center;
@@ -81,6 +80,7 @@ export default {
   border-radius: 0 0 5px 5px;
   /* 阴影 */
   box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.1);
+  z-index: 1;
 }
 
 .el-main {
@@ -90,5 +90,8 @@ export default {
 /* 隐藏滚动条 */
 *::-webkit-scrollbar {
   display: none;
+}
+.el-header{
+  padding: 0;
 }
 </style>

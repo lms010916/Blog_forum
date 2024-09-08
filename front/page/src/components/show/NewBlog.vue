@@ -5,7 +5,7 @@
 <script>
 import BlogCard from './BlogCard.vue';
 export default {
-  name: 'GoodBlog',
+  name: 'NewBlog',
   components: {
     BlogCard
   }
