@@ -26,6 +26,17 @@ const routes = [
   },
   { path: '/login', component: () => import('../views/Login.vue') },
   { path: '/myblog', component: () => import('../views/MyBlog.vue') },
+  {
+    path: '/settings', 
+    component: () => import('../views/ManageBlog.vue'),
+    redirect: '/settings/blogtable',
+    children: [
+      {
+        path: 'blogtable',
+        component: ()=> import('../components/manage/Table.vue')
+      }
+    ]
+  },
 ]
 
 const router = createRouter({

@@ -13,7 +13,7 @@
                   <router-link to="/">首页</router-link>
                 </li>
                 <li>
-                  <router-link to="#">管理</router-link>
+                  <router-link to="/settings">博客管理</router-link>
                 </li>
               </ul>
             </el-header>
