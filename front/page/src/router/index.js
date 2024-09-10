@@ -1,43 +1,31 @@
 import { createMemoryHistory, createRouter, createWebHistory } from 'vue-router'
 
-// 浏览博客的主页
-import ShowBlog from '../views/ShowBlog.vue'
-// 首页视图
-import BlogCard from '../components/show/BlogCard.vue'
-// 精华视图
-import GoodBlog from '../components/show/GoodBlog.vue'
-// 最新视图
-import NewBlog from '../components/show/NewBlog.vue'
-// 我的视图
-import Follow from '../components/show/Follow.vue'
-import Login from '../views/Login.vue'
-
-
 const routes = [
   {
     path: '/',
-    component: ShowBlog,
+    component: () => import('../views/ShowBlog.vue'),
     redirect: '/home',
-    children:[
+    children: [
       {
         path: 'home',
-        component: BlogCard
+        component: () => import('../components/show/BlogCard.vue')
       },
       {
         path: 'good',
-        component: GoodBlog
+        component: () => import('../components/show/GoodBlog.vue')
       },
       {
         path: 'newblog',
-        component: NewBlog
+        component: () => import('../components/show/NewBlog.vue')
       },
       {
         path: 'follow',
-        component: Follow
+        component: () => import('../components/show/Follow.vue')
       }
     ]
   },
-  { path: '/login', component: Login },
+  { path: '/login', component: () => import('../views/Login.vue') },
+  { path: '/myblog', component: () => import('../views/MyBlog.vue') },
 ]
 
 const router = createRouter({

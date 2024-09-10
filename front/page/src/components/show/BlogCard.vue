@@ -65,52 +65,7 @@ export default {
           like: 131,
           comment: 200,
           collect: 151
-        },
-        {
-          title: '博客标题3',
-          content: '博客内容3',
-          username: '用户名3',
-          create_time: '2024-10-21',
-          like: 131,
-          comment: 200,
-          collect: 151
-        },
-        {
-          title: '博客标题3',
-          content: '博客内容3',
-          username: '用户名3',
-          create_time: '2024-10-21',
-          like: 131,
-          comment: 200,
-          collect: 151
-        },
-        {
-          title: '博客标题3',
-          content: '博客内容3',
-          username: '用户名3',
-          create_time: '2024-10-21',
-          like: 131,
-          comment: 200,
-          collect: 151
-        },
-        {
-          title: '博客标题3',
-          content: '博客内容3',
-          username: '用户名3',
-          create_time: '2024-10-21',
-          like: 131,
-          comment: 200,
-          collect: 151
-        },
-        {
-          title: '博客标题3',
-          content: '博客内容3',
-          username: '用户名3',
-          create_time: '2024-10-21',
-          like: 131,
-          comment: 200,
-          collect: 151
-        },
+        }
       ]
     };
     return data;

@@ -1,11 +1,11 @@
 <template>
   <div class="recommand">
     <div v-for="i, j in recommand_list">
-      <p>
-        {{ j }}
-        <hr>
+      <div class="recommand_title">
+        <p>{{ j }}</p>
+        <hr />
         <a href="#" v-for="item in i">{{ item }}<br /></a>
-      </p>
+      </div>
     </div>
   </div>
 </template>
@@ -37,12 +37,22 @@ export default {
   margin-bottom: 20px;
   margin-left: 15px;
 }
+
 /* a标签去除下划线，鼠标划过显示下划线 */
 a {
   text-decoration: none;
   color: #000;
 }
+
 a:hover {
   text-decoration: underline;
+}
+
+p {
+  margin: 0;
+}
+
+.recommand_title {
+  margin-bottom: 20px;
 }
 </style>
