@@ -3,6 +3,8 @@
 # 使用组件
 - vue3
 - element-plus
+- router                                # 路由插件
+- eventbus                              # 方便传参
 # 文件说明
 ```
 myapp/

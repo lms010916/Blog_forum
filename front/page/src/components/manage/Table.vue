@@ -8,9 +8,11 @@
         <el-table-column fixed="right" label="操作" min-width="120">
           <template #default>
             <el-button link type="primary" size="default" @click="editBlog">
-              编辑
+              {{ tableRow.edit }}
             </el-button>
-            <el-button link type="primary" size="default" @click="deleteBlog">删除</el-button>
+            <el-button link type="primary" size="default" @click="deleteBlog">
+              {{ tableRow.delete }}
+            </el-button>
           </template>
         </el-table-column>
       </el-table>
@@ -106,7 +108,9 @@ export default {
         like: "点赞",
         comment: "评论",
         collect: "收藏",
-        view: "浏览量"
+        view: "浏览量",
+        edit: "编辑",
+        delete: "删除"
       }
 
     }
@@ -118,8 +122,12 @@ export default {
     },
     deleteBlog() {
       console.log("deleteBlog");
-    }
-  }
+    },
+    // 获取后台数据
+    getTableData() {
+      console.log("getTableData");
+    },
+  },
 }
 </script>
 

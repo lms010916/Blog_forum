@@ -23,7 +23,9 @@ export default {
     Menu
   },
   data() {
-    return {};
+    const data = {
+    };
+    return data;
   },
 };
 </script>

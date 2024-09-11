@@ -6,7 +6,7 @@
       </router-link>
     </div>
     <div class="header-2">
-      <el-input size="large" v-model="input" style="max-width: 800px;width:100%" placeholder="输入要搜索的内容"
+      <el-input size="large" v-model="searchValue" style="max-width: 800px;width:100%" placeholder="输入要搜索的内容"
         class="input-with-select" type="text">
         <template #prepend>
           <el-select size="large" v-model="selectValue" style="width: 80px">
@@ -55,6 +55,7 @@ export default {
     const data = {
       avatar: "https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg",
       selectValue: "标题",
+      searchValue: "",
     }
     return data;
   },
