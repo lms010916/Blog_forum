@@ -5,7 +5,7 @@
     </el-header>
     <el-container>
       <el-aside width="200px">
-        <Menu></Menu>
+        <Aside></Aside>
       </el-aside>
       <el-main>
         <router-view />
@@ -15,12 +15,12 @@
 </template>
 <script>
 import Header from '../layout/show/Header.vue';
-import Menu from '../components/manage/Menu.vue';
+import Aside from '../layout/manage/Aside.vue';
 export default {
   name: "ManageBlog",
   components: {
     Header,
-    Menu
+    Aside
   },
   data() {
     const data = {
@@ -46,6 +46,6 @@ export default {
   padding: 0;
 }
 .el-container .el-container {
-  height: calc(100% - 20px);
+  height: calc(100% - 60px);
 }
 </style>

@@ -34,6 +34,10 @@ const routes = [
       {
         path: 'blogtable',
         component: () => import('../components/manage/Table.vue'),
+      },
+      {
+        path: 'info',
+        component: () => import('../components/manage/Info.vue'),
       }
     ]
   },

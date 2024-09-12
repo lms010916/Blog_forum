@@ -5,13 +5,11 @@
       <el-table :data="tableData">
         <el-table-column v-for="i, j, k in tableRow" :prop="j" :key="k" :label="i"
           :min-width="k === 0 ? 300 : k === 1 ? 180 : 0" />
+
         <el-table-column fixed="right" label="操作" min-width="120">
           <template #default>
-            <el-button link type="primary" size="default" @click="editBlog">
-              {{ tableRow.edit }}
-            </el-button>
-            <el-button link type="primary" size="default" @click="deleteBlog">
-              {{ tableRow.delete }}
+            <el-button v-for="i in tableOption" link type="primary" size="default" @click="i.func">
+              {{ i.text }}
             </el-button>
           </template>
         </el-table-column>
@@ -29,90 +27,34 @@ export default {
     const data = {
       tableData: [
         {
-          title: "标题1",
-          date: "2022-01-01",
-          like: 100,
-          comment: 20,
-          collect: 10,
-          view: 1000
+          col1: "标题1",
+          col2: "2022-01-01",
+          col3: 100,
+          col4: 20,
+          col5: 10,
+          col6: 1000
         },
-        {
-          title: "标题2",
-          date: "2022-01-02",
-          like: 200,
-          comment: 30,
-          collect: 20,
-          view: 2000
-        },
-        {
-          title: "标题2",
-          date: "2022-01-02",
-          like: 200,
-          comment: 30,
-          collect: 20,
-          view: 2000
-        },
-        {
-          title: "标题2",
-          date: "2022-01-02",
-          like: 200,
-          comment: 30,
-          collect: 20,
-          view: 2000
-        },
-        {
-          title: "标题2",
-          date: "2022-01-02",
-          like: 200,
-          comment: 30,
-          collect: 20,
-          view: 2000
-        },
-        {
-          title: "标题2",
-          date: "2022-01-02",
-          like: 200,
-          comment: 30,
-          collect: 20,
-          view: 2000
-        },
-        {
-          title: "标题2",
-          date: "2022-01-02",
-          like: 200,
-          comment: 30,
-          collect: 20,
-          view: 2000
-        },
-        {
-          title: "标题2",
-          date: "2022-01-02",
-          like: 200,
-          comment: 30,
-          collect: 20,
-          view: 2000
-        },
-        {
-          title: "标题2",
-          date: "2022-01-02",
-          like: 200,
-          comment: 30,
-          collect: 20,
-          view: 2000
-        }
       ],
-      // 控制表格显示的列
       tableRow: {
-        title: "标题",
-        date: "发布时间",
-        like: "点赞",
-        comment: "评论",
-        collect: "收藏",
-        view: "浏览量",
-        edit: "编辑",
-        delete: "删除"
-      }
-
+        col1: "标题",
+        col2: "发布时间",
+        col3: "点赞",
+        col4: "评论",
+        col5: "收藏",
+        col6: "浏览量",
+      },
+      tableOption: [
+        {
+          func: () => {
+            console.log("edit");
+          }, text: "编辑"
+        },
+        {
+          func: () => {
+            console.log("delete");
+          }, text: "删除"
+        },
+      ],
     }
     return data;
   },
@@ -123,9 +65,75 @@ export default {
     deleteBlog() {
       console.log("deleteBlog");
     },
-    // 获取后台数据
-    getTableData() {
-      console.log("getTableData");
+    // 根据参数获取后台数据并传入到表格中
+    getTableDataByType(data) {
+      if (data == "my") {
+        this.tableRow = {
+          col1: "标题",
+          col2: "发布时间",
+          col3: "点赞",
+          col4: "评论",
+          col5: "收藏",
+          col6: "浏览量",
+        }
+        this.tableData = [
+          {
+            col1: "标题1",
+            col2: "2022-01-01",
+            col3: 100,
+            col4: 20,
+            col5: 10,
+            col6: 1000
+          },
+        ]
+        this.tableOption = [
+          {
+            func: () => {
+              console.log("edit");
+            }, text: "编辑"
+          },
+          {
+            func: () => {
+              console.log("delete");
+            }, text: "删除"
+          },
+        ]
+      }
+      else if (data == "follow") {
+        this.tableRow = {
+          title: "用户昵称",
+          character: "个性签名",
+          post: "帖子数",
+          fans: "粉丝数",
+          option: "取消关注"
+        }
+        this.tableData = [
+          {
+            title: "标题1",
+            date: "2022-01-01",
+            like: 100,
+            comment: 20,
+            collect: 10,
+            view: 1000
+          },
+        ]
+      }
+      else if (data == "collect") {
+
+      }
+      else if (data == "like") { }
+      else if (data == "comment") { }
+      else if (data == "data") { }
+    }
+  },
+  watch: {
+    // 监视路由变化
+    '$route.query.type': {
+      handler() {
+        this.getTableDataByType(this.$route.query.type);
+        console.log(this.$route.query.type);
+      },
+      immediate: true
     },
   },
 }

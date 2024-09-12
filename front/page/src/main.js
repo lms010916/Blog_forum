@@ -14,3 +14,5 @@ for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
 app.use(ElementPlus)
 app.use(router)
 app.mount('#app')
+
+console.log('输出APP方便观察', app)
