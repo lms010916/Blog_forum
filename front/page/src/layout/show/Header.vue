@@ -29,7 +29,9 @@
         <el-avatar :size="50" :src="avatar" />
         <template #dropdown>
           <el-dropdown-menu>
+            <router-link to="/IssueBlog" style="text-decoration: none;">
             <el-dropdown-item>发布博客</el-dropdown-item>
+          </router-link>
             <router-link to="/myblog" style="text-decoration: none;">
               <el-dropdown-item>我的博客</el-dropdown-item>
             </router-link>

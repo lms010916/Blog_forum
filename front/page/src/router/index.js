@@ -41,6 +41,10 @@ const routes = [
       }
     ]
   },
+  {
+    path: '/IssueBlog',
+    component: () => import('../views/IssueBlog.vue')
+  }
 ]
 
 const router = createRouter({
