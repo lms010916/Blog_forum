@@ -4,7 +4,7 @@
       <el-header>
         <Header></Header>
       </el-header>
-      <el-main>
+      <el-main class="outer-main">
         <div class="content">
           <el-container>
             <el-header>
@@ -80,7 +80,7 @@ export default {
 
 <style scoped>
 .myblog {
-  height: 250%;
+  height: 100%;
   width: 100%;
   /* 设置背景图片 */
   background-image: url("../assets/bg.jpg");
@@ -88,26 +88,22 @@ export default {
   background-repeat: no-repeat;
   background-position: center center;
 }
-
-.el-header {
-  padding: 0;
-}
-
-.el-main {
-  padding: 0;
-  margin: 100px 10%;
-  margin-bottom: 0;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 5px;
-}
-
-.el-container {
-  height: 90%;
-}
-
-.content,
-.content .el-container {
+.myblog .el-container {
   height: 100%;
+}
+
+.myblog .el-container .el-header {
+  padding: 0;
+}
+
+.outer-main {
+  height: 300%;
+  padding: 100px 10%;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.content {
+  height: 300%;
 }
 
 .content .el-header {
@@ -137,14 +133,15 @@ export default {
   height: 100%;
   border-right: 1px solid #8d8c8c;
 }
-.el-card{
+
+.el-card {
   background-color: #f9f9f9;
   height: 100%;
   border: 0;
   border-radius: 0;
 }
 
-.el-card p{
+.el-card p {
   color: #333;
   font-size: 14px;
   line-height: 1.5;
@@ -155,8 +152,10 @@ export default {
   font-size: 18px;
   font-weight: bold;
 }
+
 .content .el-main {
   margin: 0;
   padding: 30px;
+  background-color: #f9f9f9;
 }
 </style>

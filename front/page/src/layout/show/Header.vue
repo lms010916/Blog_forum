@@ -29,24 +29,26 @@
         <el-avatar :size="50" :src="avatar" />
         <template #dropdown>
           <el-dropdown-menu>
-            <router-link to="/IssueBlog" style="text-decoration: none;">
-            <el-dropdown-item>发布博客</el-dropdown-item>
-          </router-link>
+            <router-link to="/settings/publish" style="text-decoration: none;">
+              <el-dropdown-item>发布博客</el-dropdown-item>
+            </router-link>
             <router-link to="/myblog" style="text-decoration: none;">
               <el-dropdown-item>我的博客</el-dropdown-item>
             </router-link>
-            <el-dropdown-item>个人中心</el-dropdown-item>
+            <router-link to="/settings/info" style="text-decoration: none;">
+              <el-dropdown-item>个人中心</el-dropdown-item>
+            </router-link>
             <el-dropdown-item>退出登录</el-dropdown-item>
           </el-dropdown-menu>
         </template>
       </el-dropdown>
     </div>
     <div class="header-3">
-      <el-link href="#" :underline="false">
+      <router-link to="/settings/publish">
         <el-icon :size="24">
           <Position />
         </el-icon>
-      </el-link>
+      </router-link>
     </div>
   </div>
 </template>
@@ -119,5 +121,12 @@ img {
   width: 50px;
   float: right;
   margin-right: 10px;
+}
+.el-icon{
+  /* 上下居中 */
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #303133;
 }
 </style>

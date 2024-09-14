@@ -38,13 +38,14 @@ const routes = [
       {
         path: 'info',
         component: () => import('../components/manage/Info.vue'),
+      },
+      {
+        path: 'publish',
+        component: () => import('../components/manage/Publish.vue'),
       }
     ]
   },
-  {
-    path: '/IssueBlog',
-    component: () => import('../views/IssueBlog.vue')
-  }
+
 ]
 
 const router = createRouter({

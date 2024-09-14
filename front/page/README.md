@@ -2,7 +2,8 @@
 - 本项目是前台用户使用的界面，用于发布、查看、编辑、删除、搜索、点赞、评论等操作。
 # 使用组件
 - vue3
-- element-plus
+- element-plus                          # UI框架
+- vue-quill-editor                      # 富文本编辑器
 - router                                # 路由插件
 - axios                                 # 请求后台数据
 # 文件说明
