@@ -1,12 +1,6 @@
 <template>
   <el-menu class="el-menu-vertical-demo" active-text-color="#303133">
-    <el-menu-item index="1">
-      <el-icon>
-        <Position />
-      </el-icon>
-      <router-link to="/settings/publish">博客发布</router-link>
-    </el-menu-item>
-    <el-sub-menu index="2">
+    <el-sub-menu index="1">
       <template #title>
         <el-icon>
           <FolderOpened />
@@ -22,13 +16,13 @@
       </el-menu-item>
     </el-sub-menu>
 
-    <el-menu-item index="3" @click="clickEve('deleted')">
+    <el-menu-item index="2" @click="clickEve('deleted')">
       <el-icon>
         <Delete />
       </el-icon>
       回收站
     </el-menu-item>
-    <el-menu-item index="4">
+    <el-menu-item index="3">
       <el-icon>
         <User />
       </el-icon>
@@ -45,41 +39,35 @@ export default {
     const data = {
       menuList: [
         {
-          index: '2-1',
+          index: '1-1',
           name: '我的',
           query: 'my',
           icon: shallowRef(Document)
         },
         {
-          index: '2-2',
+          index: '1-2',
           name: '关注',
           query: 'follow',
           icon: shallowRef(Present)
         },
         {
-          index: '2-3',
+          index: '1-3',
           name: '收藏',
           query: 'collection',
           icon: shallowRef(Star)
         },
         {
-          index: '2-4',
+          index: '1-4',
           name: '点赞',
           query: 'like',
           icon: shallowRef(Pointer)
         },
         {
-          index: '2-5',
+          index: '1-5',
           name: '评论',
           query: 'comment',
           icon: shallowRef(ChatDotRound)
         },
-        {
-          index: '2-6',
-          name: '数据(暂定)',
-          query: 'data',
-          icon: shallowRef(DataAnalysis)
-        }
       ]
     };
     return data;

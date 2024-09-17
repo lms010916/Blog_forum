@@ -39,13 +39,10 @@ const routes = [
         path: 'info',
         component: () => import('../components/manage/Info.vue'),
       },
-      {
-        path: 'publish',
-        component: () => import('../components/manage/Publish.vue'),
-      }
     ]
   },
-
+  {path: '/createBlog', component: () => import('../views/CreateBlog.vue') },
+  {path: '/blogview', component: () => import('../views/BlogView.vue') },
 ]
 
 const router = createRouter({

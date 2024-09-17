@@ -1,7 +1,11 @@
 <template>
   <!-- 利用循环显示每个博客 -->
-  <div class="blog-card" v-for="i in blogs">
-    <div class="title"><a href="#">{{ i.title }}</a></div>
+  <div class="blog-card" v-for="i in   blogs  ">
+    <div class="title">
+      <router-link :to="{ path: '/blogview', query: { id: i.id } }">
+        {{ i.title }}
+      </router-link>
+    </div>
     <p>
       <a href="#" class="image"><img src="../../assets/test.jpg" alt="头像"></a>
       {{ i.content }}
@@ -31,6 +35,7 @@ export default {
       // 多个博客的数据，使用列表存储
       blogs: [
         {
+          id: 1,
           title: '博客标题1',
           content: '博客内容1',
           username: '用户名1',
@@ -40,6 +45,7 @@ export default {
           collect: 151
         },
         {
+          id: 2,
           title: '博客标题2',
           content: '博客内容2',
           username: '用户名2',
@@ -49,6 +55,8 @@ export default {
           collect: 13
         },
         {
+          id: 3,
+
           title: '博客标题3',
           content: '博客内容3',
           username: '用户名3',
@@ -58,6 +66,7 @@ export default {
           collect: 151
         },
         {
+          id: 4,
           title: '博客标题3',
           content: '博客内容3',
           username: '用户名3',

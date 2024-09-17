@@ -26,10 +26,10 @@
     </div>
     <div class="header-4">
       <el-dropdown placement="bottom" trigger="click">
-        <el-avatar :size="50" :src="avatar" />
+        <el-avatar :size="35" :src="avatar" />
         <template #dropdown>
           <el-dropdown-menu>
-            <router-link to="/settings/publish" style="text-decoration: none;">
+            <router-link to="/createBlog" style="text-decoration: none;">
               <el-dropdown-item>发布博客</el-dropdown-item>
             </router-link>
             <router-link to="/myblog" style="text-decoration: none;">
@@ -44,7 +44,7 @@
       </el-dropdown>
     </div>
     <div class="header-3">
-      <router-link to="/settings/publish">
+      <router-link to="/createBlog">
         <el-icon :size="24">
           <Position />
         </el-icon>
@@ -69,7 +69,7 @@ export default {
 .header {
   text-align: center;
   /* line-height: 60px; */
-  height: 60px;
+  height: 35px;
   background-color: #f9f9f9;
   box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.1);
   z-index: 1;
@@ -77,7 +77,7 @@ export default {
 }
 
 img {
-  height: 60px;
+  height: 35px;
   width: auto;
   border-radius: 5%;
 }

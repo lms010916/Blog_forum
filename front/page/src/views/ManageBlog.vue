@@ -44,6 +44,7 @@ export default {
 }
 .el-main {
   padding: 0;
+  height: 100%;
 }
 .el-container .el-container {
   height: calc(100% - 60px);
